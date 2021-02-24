@@ -51,8 +51,6 @@ class SheetSplitter extends React.Component {
     }
 
     handleWheel(event) {
-        if(!event.ctrlKey) return;
-
         let value = this.state.scale;
         if (event.deltaY >= 0) {
             if (this.state.scale > 0.1) {
@@ -410,7 +408,7 @@ class SheetSplitter extends React.Component {
                                         {I18.f("SCALE")}
                                     </td>
                                     <td>
-                                        <input ref={this.rangeRef} type="range" min="0.1" max="1" step={this.step} defaultValue="1" onChange={this.changeScale}/>
+                                        <input ref={this.rangeRef} type="range" min="0.1" max="2" step={this.step} defaultValue="1" onChange={this.changeScale}/>
                                     </td>
                                 </tr>
                             </tbody>
